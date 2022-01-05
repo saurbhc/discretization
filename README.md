@@ -22,8 +22,14 @@ python discretization.py
 pytest
 ```
 
-## Code Formatting
+## Code Formatting [optional]
 
 ```bash
 black .
+```
+
+# Run pre-commit [optional]
+
+```bash
+pre-commit run --all-files
 ```
