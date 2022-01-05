@@ -1,4 +1,4 @@
-from math import log2, inf
+from math import log2
 
 import pandas as pd
 
@@ -11,7 +11,8 @@ def calculate_log2(input):
 
 
 class Discretization:
-    def __init__(self):
+    def __init__(self, dataset_file_name="dataset.csv"):
+        self.dataset_name = dataset_file_name
         self.dataset = None
         self.information_gain_of_whole_dataset = None
         self.splitting_points = None
@@ -43,7 +44,7 @@ class Discretization:
         return self._best_split_dict["splitting_point"]
 
     def _import_dataset(self):
-        self.dataset = pd.read_csv("dataset2.csv", sep=",", header=0)
+        self.dataset = pd.read_csv(self.dataset_name, sep=",", header=0)
 
     def _calculate_information_gain_of_whole_dataset(self):
         unique_labels = self.dataset.label.unique()
