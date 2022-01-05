@@ -1,5 +1,5 @@
 # discretization
-Discretisation - Entropy-based binning (supervised)
+Discretisation - Entropy-based binning (Supervised Learning)
 
 Discretization is the process through which we can transform continuous variables, models or functions into a discrete form.
 
@@ -8,10 +8,22 @@ We do this by creating a set of contiguous intervals (or bins) that go across th
 > Continuous data is Measured, while Discrete data is Counted.
 
 
-Setup:
+## Setup:
 
-- python3 -m venv .venv
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python discretization.py
+```
 
-- source .venv/bin/activate
+## Run Tests:
 
-- python execute.py
+```python
+pytest
+```
+
+## Code Formatting
+
+```bash
+black .
+```
